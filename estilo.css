@@ -1,12 +1,16 @@
+/*En este caso utilizo el selector universal para agustar los parametros de la pagina en general*/
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+/*En este caso agrego un paddin de 55 pixeles a la pagina*/
 main{
     padding-top: 55px;
 }
+
 /*Desarrollo punto 1*/
+/*En este caso agrego estilo a una caja*/
 .punto1{
     background-color: greenyellow;
     border: 2px solid;
@@ -14,38 +18,43 @@ main{
     text-align: center;
     padding: 15px;
 }
-
+/*En este caso agrego una pseudo clase que cambiara el color del la caja cuando el cursor este encima de la caja*/
 .punto1:hover{
     background-color: white;
     color: red;
 }
 /*Desarrollo punto 2*/
+/*En este caso  aplico un margen acia arriba de 30 pixles*/
 .punto2{
     margin-top: 30px;
 }
-.punto2 a{
+/*En este caso aplico estilo a un texto*/
+.punto2{
     text-decoration: none;
     font-size: 20px;
-    color: black;
+    color: rgb(255, 255, 255);
     font-weight: 700px;
 }
-
+/*En este caso utilizo un selecetor de id para aplicar un color a p1 y utilizo display none para ocultar p1*/
 #p1{
+    color: var(--fondo);
+    display: none;
+}
+/*En este caso utilizo la pseudo clase target para, aplicar un color, un color de fondo y volver a p1 un dato de tipo bloque*/
+#p1:target{
+    background-color: goldenrod;
+    display: block;
     color: white;
 }
 
-.color:target{
-    background-color: goldenrod;
-}
-
 /*Desarrollo punto 3*/
+/*En este caso aplico un margen superior de 15pixeles y aplico un borde y color de fondo*/
 .punto3{
     margin-top: 15px;
     border: 3px solid;
     background-color: goldenrod;
-    display: inline-block;
 }
-
+/*En este caso utilizo la peseudo clase first-child para aplicar estilo al primer hijo de de .punto3*/
 .punto3 h1:first-child{
     color: crimson;
     font-family: Arial, Helvetica, sans-serif;
@@ -57,19 +66,19 @@ main{
 .punto4{
     margin-top: 20px;
 }
-
+/*En este caso utilizo la pseudo clase invalir para que aplique un color a los apartados invalidos*/
 input:invalid{
     background-color:red;
 }
 
 /*Desarrollo punto 5*/
-
+/*En este caso utilizo la pseudo clase first type para aplicar un color de fondo a un elemento primero en su tipo*/
 .punto5 > input:first-of-type{
     background-color: goldenrod;
 }
 
 /*Desarrollo punto 6*/
-
+/*En este caso utilizo la pseudo clase focus para aplicar un borde a los elementos seleccionados*/
 .punto6:focus{
     border: 5px solid blue;
 }
@@ -81,7 +90,7 @@ input:invalid{
     border: 3px solid;
     display: inline-block;
 }
-
+/*En este caso utilizo la pseudo clase only type para aplicar un color de fondo a un elemento unico en su tipo*/
 .punto7 h3:only-of-type{
     background-color: burlywood;
 }
@@ -92,7 +101,7 @@ input:invalid{
     margin-top: 15px;
     border: 3px solid;
 }
-
+/*En este caso utilizo la pseudo clase first type para aplicar un color de fondo a un elemento primero en su tipo*/
 .punto8 p:first-of-type{
     font-family: Arial, Helvetica, sans-serif;
     color: cadetblue;
@@ -100,16 +109,16 @@ input:invalid{
 }
 
 /*Desarrollo punto 9*/
-
+/*En este caso tilizo root para inicializar una plase (color1)*/
 :root{
-    color:gray;   
+    --color1: rgb(255, 0, 255);  
 }
 
 /*Desarollo punto 10 - 18*/
-
+/*En este caso creo una barra de navegacion (aplico position fixed para que sea fija y utilizo z-indez para que nada se le sobre ponga)*/
 .punto10{
     position: fixed;
-    z-index: 1;
+    z-index: 10;
     background-color: green;
     border: 2px solid;
     height: 50px;
@@ -118,7 +127,7 @@ input:invalid{
     text-align: center;
     margin-bottom: 25px;
 }
-
+/*En este caso aplico estilos a los elementos a dentro de nav*/
 .punto10 nav > a{
     text-decoration: none;
     margin: 0px 15px;
@@ -126,28 +135,28 @@ input:invalid{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
-
+/*En este caso utilizo hver para que los textos cambien de estilo a poner el curzor*/
 .punto10 nav > a:hover{
     color: goldenrod;
     font-family: 'Times New Roman', Times, serif;
 }
 
 /*Desarrollo punto 11*/
-
+/*En este caso utilizo la pseudo clase before para generar un corazon antes del texto*/
 .punto11 h1::before{
     content: "♥";
     color: red;
 }
 
 /*Desarrollo punto 12*/
-
+/*En este caso utilizo la pseudo clase after para agregar un texto despues del texto*/
 .punto12 p::after{
     content: "→ Esto es un texto :)";
     color: green;
 }
 
 /*Desarrollo punto 13*/
-
+/*En este caso creo un boton*/
 .punto13{
     background-color:blanchedalmond;
     border: 2px solid;
@@ -157,14 +166,14 @@ input:invalid{
     padding: 15px;
     border-radius: 15px;
 }
-
+/*En este caso aplico estilo a los elementos a dentro de nav*/
 .punto13 nav > a{
     text-decoration: none;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
     color: brown;
 }
-
+/*En este caso creo otro bloque de fondo para simular una sombra*/
 .punto13 a::after{
     content: "";
     position: absolute;
@@ -177,7 +186,7 @@ input:invalid{
 }
 
 /*Desarrollo punto 14*/
-
+/*En este caso añado estilos a un blockquote*/
 blockquote{
     margin-top: 15px;
     padding: 5px;
@@ -186,11 +195,11 @@ blockquote{
     color: black;
     display: inline-block;
 }
-
+/*En este caso añado comillas con after*/
 .punto14::after{
     content: '"';
 }
-
+/*En este caso añado comillas con before*/
 .punto14::before{
     content: '"';
 }
@@ -202,26 +211,29 @@ blockquote{
     margin-top: 15px;
     padding: 5px;
 }
-
+/*En este caso sobre pongo un corazon con before*/
 .punto15::before{
     content: "♥";
+    color: red;
     font-size: 20px;
     position: absolute;
     padding-top: 18px;
     padding-left: 6px;
 }
 
-/*Desarrollo punto 16*/
+/*Desarrollo punto 16 - 9*/
 
 .punto16{
     margin-top: 15px;
 }
+/*En este caso  creo un contenedor y aplico una variable de color*/
 .punto16 section{
     position: relative;
     width: 250px;
     height: 250px;
-    background-color: chocolate;
+    background-color: var(--color1);
 }
+/*En este caso muevo la posicion de la imagen sin alterar su flujo*/
 .punto16 img{
     width: 100px;
     position: absolute;
@@ -230,7 +242,7 @@ blockquote{
 }
 
 /*Desarrollo punto 17*/
-
+/*En este caso creo un elemento card*/
 .punto17{
     background-image: linear-gradient(orange, rgb(232, 205, 24));
     height: 300px;
@@ -241,21 +253,21 @@ blockquote{
     border-radius: 10px;
     position: relative;
 }
-
+/*En este caso aplico estilos a los elementos h3  dentro de la card*/
 .card h3{
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
     font-size: 30px;
     color: crimson;
 }
-
+/*En este caso aplico estilos a los elementos p dentro de card*/
 .card p{
     margin: 10px 0px;
     color: black;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 17px;
 }
-
+/*En este caso creo un boton*/
 .card button{
     position: absolute;
     font-size: 20px;
@@ -272,6 +284,7 @@ blockquote{
     border: 2px solid black;
     position: absolute;
     z-index: 1;
+    margin-left: 40px;
 }
 /*Esta caja sin z-index se sobre pondra a caja 1, pero con z-index esta caja quedara debajo*/
 .caja2{
@@ -283,7 +296,7 @@ blockquote{
 }
 
 /*Desarrollo punto 20*/
-
+/*En este caso creo un elemento card (Lo centro utilizando position y transform)*/
 .punto20{
     background-image: linear-gradient(darkblue, blue);
     height: 300px;
@@ -293,13 +306,14 @@ blockquote{
     border: 2px solid black;
     border-radius: 10px;
     position: relative;
-    transform:translateX(500px)
+    transform:translateX(50rem)
 }
-
+/*En este caso aplico unas medidas al contenedor*/
 .card2{
     height: 100%;
     width: 100%;
 }
+/*En este caso aplico una imagen en el elemento card*/
 .card2 img{
     height: 100%;
     width: 100%;
@@ -307,3 +321,49 @@ blockquote{
     border-radius: 5px;
     object-fit: cover;
 }
+
+/*Desarrollo punto 21*/
+ /*En este caso creo y aplico una variable de color*/
+:root{
+    --primario: red;
+}
+
+.punto21{
+    margin-top: 10px;
+    border: 2px black solid;
+    color: var(--primario);
+    background-color: bisque;
+    display: inline-block;
+}
+
+.punto21 p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
+.punto21 h1:hover{
+    color: var(--color1);
+}
+
+/*Desarollo punto 22 - 23*/
+/*En este caso creo y aplico unas variables de color para letras y fondo*/
+:root{
+    --fondo: rgb(65, 64, 64);
+    --letras: white;
+}
+
+body{
+    background-color: var(--fondo, black);
+    color: var(--letras, yellow);
+}
+
+/*Desarrollo punto 24*/
+/*En este caso llamo una variable local*/
+.punto24{
+    background-color: var(--color1);
+    color: var(--fondo);
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
