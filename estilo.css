@@ -109,6 +109,7 @@ input:invalid{
 
 .punto10{
     position: fixed;
+    z-index: 1;
     background-color: green;
     border: 2px solid;
     height: 50px;
@@ -284,7 +285,7 @@ blockquote{
 /*Desarrollo punto 20*/
 
 .punto20{
-    background-image: linear-gradient(red, crimson);
+    background-image: linear-gradient(darkblue, blue);
     height: 300px;
     width: 250px;
     padding: 15px;
@@ -293,4 +294,16 @@ blockquote{
     border-radius: 10px;
     position: relative;
     transform:translateX(500px)
+}
+
+.card2{
+    height: 100%;
+    width: 100%;
+}
+.card2 img{
+    height: 100%;
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 5px;
+    object-fit: cover;
 }
